@@ -39,24 +39,48 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-gray-300 hover:text-indigo-400 transition-colors font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <a
-              href="/resume.pdf"
-              download
-              className="bg-gradient-to-r from-indigo-600 to-emerald-600 text-white px-4 py-2 rounded-lg hover:from-indigo-700 hover:to-emerald-700 transition-colors font-medium"
-            >
-              Download CV
-            </a>
-          </div>
+<div className="hidden md:flex items-center space-x-8">
+  {navItems.map((item) => (
+    <Link
+      key={item.name}
+      href={item.href}
+      className="text-gray-300 hover:text-indigo-400 transition-colors font-medium"
+    >
+      {item.name}
+    </Link>
+  ))}
+  <a
+    href="/AdrianCalicdan.pdf"
+    download="AdrianCalicdan.pdf"
+    className="bg-gradient-to-r from-indigo-600 to-emerald-600 text-white px-4 py-2 rounded-lg hover:from-indigo-700 hover:to-emerald-700 transition-colors font-medium"
+  >
+    Download CV
+  </a>
+</div>
+
+{/* Mobile Menu */}
+{isOpen && (
+  <div className="md:hidden py-4 border-t border-gray-800">
+    {navItems.map((item) => (
+      <Link
+        key={item.name}
+        href={item.href}
+        className="block py-2 text-gray-300 hover:text-indigo-400 transition-colors"
+        onClick={() => setIsOpen(false)}
+      >
+        {item.name}
+      </Link>
+    ))}
+    <a
+      href="/AdrianCalicdan.pdf"
+      download="AdrianCalicdan.pdf"
+      className="block mt-4 bg-gradient-to-r from-indigo-600 to-emerald-600 text-white px-4 py-2 rounded-lg text-center hover:from-indigo-700 hover:to-emerald-700 transition-colors"
+      onClick={() => setIsOpen(false)}
+    >
+      Download CV
+    </a>
+  </div>
+)}
 
           {/* Mobile menu button */}
           <button

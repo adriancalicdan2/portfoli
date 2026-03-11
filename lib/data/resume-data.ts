@@ -57,17 +57,17 @@ export const resumeData = {
   },
   languages: ["English", "Filipino"],
   references: [
-    {
-      name: "Bailey Dupont",
-      position: "CEO, Wardiere Inc.",
-      phone: "123-456-7890",
-      email: "hello@reallygreatsite.com"
-    },
-    {
-      name: "John Philip Sumido",
-      position: "HR Generalist",
-      phone: "123-456-7890",
-      email: "hello@reallygreatsite.com"
-    }
-  ]
+  {
+    name: "John Philip Sumido",
+    position: "HR Generalist",
+    email: "johnsumido29@gmail.com",
+    phone: "" // Add phone number if available
+  },
+  {
+    name: "Angel Alejo",
+    position: "HR Supervisor",
+    email: "elicke.gna9793@gmail.com",
+    phone: "" // Add phone number if available
+  }
+]
 };
